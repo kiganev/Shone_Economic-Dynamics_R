@@ -78,7 +78,7 @@ sol_df <- bind_rows(
 )
 
 # Plot the direction field with solution curves
-plot_fig2_12 <- ggplot() +
+plot_fig2_8 <- ggplot() +
   xlim(-2,2) +
   ylim(-2,2) + 
   # Direction field
@@ -91,4 +91,4 @@ plot_fig2_12 <- ggplot() +
   labs(title = "Direction Field with Solution Curves",
        x = "x", y = "y", color = "Initial condition")
 
-ggsave(plot_fig2_12, "fig2_12.pdf")
+ggsave("fig2_8.pdf", plot_fig2_8)
