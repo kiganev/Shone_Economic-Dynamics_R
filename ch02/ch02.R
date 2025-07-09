@@ -65,7 +65,7 @@ sol1 <- solve_trajectory(-2, 20)
 sol2 <- solve_trajectory(-2, 10)
 sol3 <- solve_trajectory(-2, 5)
 sol4 <- solve_trajectory(-2, 2)
-sol4 <- solve_trajectory(-2, -2)
+sol5 <- solve_trajectory(-2, -2)
 
 
 # Combine all into one data frame
@@ -74,7 +74,7 @@ sol_df <- bind_rows(
   mutate(sol2, group = "y0 = 10"),
   mutate(sol3, group = "y0 = 5"),
   mutate(sol4, group = "y0 = 2"),
-  mutate(sol4, group = "y0 = -2")
+  mutate(sol5, group = "y0 = -2")
 )
 
 # Plot the direction field with solution curves
@@ -90,5 +90,7 @@ plot_fig2_8 <- ggplot() +
   theme_minimal() +
   labs(title = "Direction Field with Solution Curves",
        x = "x", y = "y", color = "Initial condition")
+
+plot_fig2_8
 
 ggsave("fig2_8.pdf", plot_fig2_8)
